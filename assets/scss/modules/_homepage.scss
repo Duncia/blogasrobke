@@ -1,0 +1,19 @@
+.hero {
+    background-color: $color-black;
+    color: $color-white;
+    border-bottom: 4px solid $color-red;
+
+    &__content {
+        h1 {
+            font-size: 8rem;
+            padding-bottom: 2rem;
+        }
+        p{
+            padding-bottom: 2rem;
+        }
+    }
+
+    img {
+        max-width: 50rem;
+    }
+}

@@ -1,0 +1,128 @@
+.header {
+    background-color: $color-black;
+    color: $color-white;
+    font-family: 'Bebas Neue',cursive;
+    font-weight: 400;
+    font-size: 2.2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    .container__inner{
+        display: flex;
+        justify-content: right;
+    }
+
+    &__menu{
+        visibility: hidden;
+        @include tablet {
+            visibility: visible;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        };
+        ul {
+            list-style: none;
+            display: flex;
+            li {
+                margin-right: 3rem;
+                cursor: pointer;
+                &:hover{
+                    color: $color-red;
+                }
+            }
+        }
+    }
+    &__burger{
+        width: 4rem;
+        @include tablet {
+            width: 3rem;
+        };
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        z-index: 20;
+        margin-top: -1px;
+
+        &__middle{
+            position: relative;
+            transition: all .2s;  
+            &,
+            &::before,
+            &::after {
+                width: 4rem;
+                @include tablet {
+                    width: 3rem;
+                };
+                height: 3px;
+                background-color: $color-white;
+            }
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                transition: all .5s;
+            }
+            &::before {
+                top: -8px;
+            }
+            &::after {
+                top: 8px;
+            }
+        }
+        &__middle--active {
+            background-color: transparent !important;
+            &::before {
+                top: 0 !important;
+                transform: rotate(45deg);
+                transition: all .5s;
+            }
+            &::after {
+                top: 0 !important;
+                transform: rotate(-45deg);
+                transition: all .5s;
+            }
+        }
+    }
+}
+.main-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background-color: $color-black;
+    display: flex;
+    justify-content: center;
+    padding-top: 7rem;
+    transition: all .3s;
+    visibility: visible;
+    overflow: auto;
+    &--close{
+        left: -200%;
+        transition: all .7s;
+        visibility: hidden;
+    }
+    ul{
+        list-style: none;
+
+        li {
+            font-size: 4rem;
+            @include tablet {
+                font-size: 3.5rem;
+            };
+            margin-bottom: 1rem;
+            color: $color-white;
+            a:hover{
+                color: $color-red;
+            }
+        }
+    }
+}
+.pos-fixed{
+    position: fixed !important;
+}
+.visibility-hidden{
+    visibility: hidden;
+}

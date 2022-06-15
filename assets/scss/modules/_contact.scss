@@ -1,0 +1,45 @@
+.contact {
+    background-image: linear-gradient(175deg, transparent 0%, transparent 70%, $color-black 70%);
+    border-top: 4px solid $color-red;
+    img {
+        max-width: 50rem;
+    }
+}
+
+.contact__form {
+    max-width: 50rem;
+
+    &-inputs{
+        display: flex;
+        justify-content: space-between;
+    }
+    input, textarea{
+        font-size: 1.4rem;
+        font-family: inherit;
+        color: $color-white;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        background-color: $color-red;
+        background: $color-red;
+        border: none;
+        margin-bottom: 2rem;
+        width: 100%;
+        max-width: 24rem;
+    }
+}
+.contact__form input:not(:last-of-type){
+    margin-right: 2rem;
+}
+.contact__form input:focus, .contact__form textarea:focus{
+    outline: none;
+}
+.contact__form input::-webkit-input-placeholder,
+.contact__form input::placeholder,
+.contact__form textarea::-webkit-input-placeholder,
+.contact__form textarea::placeholder{
+    color: $color-white;
+}
+.contact__form textarea {
+    max-width: 50rem;
+    resize: none;
+}

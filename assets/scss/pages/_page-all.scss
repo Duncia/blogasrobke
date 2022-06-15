@@ -1,0 +1,59 @@
+.all-articles{
+    h4 {
+        color: $color-red;
+        font-size: 2.5rem;
+        font-family: 'Montserrat', sans-serif;
+        padding-bottom: 2rem;
+    }
+    p{
+        padding-bottom: 2rem;
+    }
+
+    &__banner{
+        background-color: $color-black;
+        color: $color-white;
+        border-bottom: 4px solid $color-red;
+        .text{
+            max-width: 50rem;
+        }
+        img {
+            max-width: 35rem;
+            width: 100%;
+            border: 3px solid $color-white;
+        }
+        button {
+            margin-bottom: 2rem;
+            margin-right: 2rem;
+        }
+    }
+    &__single{
+        display: block;
+        @include tablet {
+            display: grid;
+        };
+        grid-template-columns: 1fr 2fr;
+        row-gap: 2rem;
+        column-gap: 2rem;
+        max-width: 90rem;
+        margin: auto;
+        figure img {
+            max-width: 25rem;
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border: 3px solid $color-black;
+            margin-bottom: 2rem;
+        }
+    }
+}
+.all-articles-pagination {
+    margin-bottom: 6rem;
+    a, span{
+        color: $color-red;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 3rem;
+        margin-bottom: 6rem;
+        margin-right: 1rem;
+        font-weight: 600;
+    }
+}
