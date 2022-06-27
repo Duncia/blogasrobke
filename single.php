@@ -24,7 +24,7 @@ SINGLE POST template.
     </section>
     <section class="container__inner container__inner--page">
         <?php the_content(); ?>    
-        <h4 class="pt-sm pb-sm"><?php _e('<a href="http://localhost/blogasrobke/">#All articles</a>', 'blogasrobke'); ?></h4> 
+        <h4 class="pt-sm pb-sm"><?php _e('<a href="https://blogasrobke.eu/all/">#All articles</a>', 'blogasrobke'); ?></h4> 
     </section>
 </main>
 <?php   endwhile;

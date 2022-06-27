@@ -22,7 +22,7 @@ Website FOOTER part.
                 </form>
             </div>
             <figure class="flex-2-child-50 txt-center">
-                <img width="600" height="400" src="<?php echo get_template_directory_uri() . '/img/contact-me.webp'; ?>" alt="Contact"/>
+                <img width="600" height="400" src="<?php echo get_template_directory_uri() . '/img/contact-me.webp'; ?>" alt="<?php _e('Contact form image', 'blogasrobke'); ?>"/>
             </figure>
         </div>
     </section>
@@ -30,21 +30,9 @@ Website FOOTER part.
         <div class="container__inner">
             <nav class="footer__nav">
                 <ul>
-                    <li>Read articles
-                        <ul class="sub-menu">
-                            <li><a href="#">All articles</a></li>
-                            <li><a href="#">Personal articles</a></li>
-                            <li><a href="#">Web & work</a></li>
-                            <li><a href="#">LT</a></li>
-                        </ul>
-                    </li>
-                    <li>More information
-                        <ul class="sub-menu">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About me</a></li>
-                            <li><a href="#">Web development</a></li>
-                        </ul>
-                    </li>
+                    <?php $args = array(
+                    'theme_location' => 'footer-meniu');
+                    wp_nav_menu($args); ?>
                 </ul>
             </nav>
             <div class="footer__icons">
@@ -54,7 +42,7 @@ Website FOOTER part.
                 </a>
                 </div>
                 <div class="footer-svg">
-                    <a href="https://github.com/Duncia" target="_blank">
+                    <a href="https://github.com/Duncia/blogasrobke" target="_blank">
                         <svg class="footer-icon__github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" xmlns:v="https://vecta.io/nano"><path d="M12 2A10 10 0 0 0 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476l-.013-1.862C7 19.613 6.35 18.538 6.15 17.975c-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938a3.89 3.89 0 0 1 1.025-2.688c-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338 9.28 9.28 0 0 1 2.5.337c1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85l-.013 2.75c0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12 10 10 0 0 0 12 2z"/></svg>
                     </a>
                 </div>

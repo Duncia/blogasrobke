@@ -2,7 +2,7 @@
 /*
 Basic 404 page template
 
-- Few strings ready for translations
+- Page not found text ready for translations
 */
 ?>
 
@@ -10,7 +10,7 @@ Basic 404 page template
 
     <section class="container">
         <div class="container__inner">
-            <h1 class="heading heading--1"><?php _e('Ooops error occured... Nothing to display', 'blogasrobke'); ?></h1>
+            <h1 class="txt-center pt-lr pb-lr"><?php _e('Ooops error occured... <br><br><br>Nothing to display', 'blogasrobke'); ?></h1>
         </div>
     </section>
     

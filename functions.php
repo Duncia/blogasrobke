@@ -9,6 +9,7 @@ function blogasrobke_setup(){
     load_theme_textdomain( 'blogasrobke', get_template_directory() . '/languages' );
     //Register menu
     register_nav_menu('header-meniu', 'Header');
+    register_nav_menu('main-meniu', 'Main');
     register_nav_menu('footer-meniu', 'Footer');
 }
 add_action('after_setup_theme', 'blogasrobke_setup');
@@ -33,3 +34,50 @@ function cc_mime_types($mimes) {
     return $mimes;
   }
 add_filter('upload_mimes', 'cc_mime_types');
+
+//Custom posts
+function blogasrobke_post_types() {
+	register_post_type('web', array(
+		'public' => true,
+        'show_in_rest' => true,
+        'show_in_menu' => true,
+        'menu_position' => 7,
+        'taxonomies' => ['category', 'post_tag'],
+		'labels' => array(
+			'name' => 'Web & work',
+            'add_new_item' => 'Add new web article',
+            'edit_item' => 'Edit web article',
+            'all_items' => 'All web articles',
+            'singular_name' => 'Web article'
+		),
+    'rewrite'     => array(
+      'slug' => __( 'web', 'blogasrobke' ),
+    ),
+		'menu_icon' => 'dashicons-media-code',
+        'supports' => array(
+            'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments', 'page-attributes', 'post-formats', 'custom-fields'
+        )
+	));
+    register_post_type('experiences', array(
+		'public' => true,
+        'show_in_rest' => true,
+        'show_in_menu' => true,
+        'menu_position' => 5,
+        'taxonomies' => ['category', 'post_tag'],
+		'labels' => array(
+			'name' => 'Experiences and life',
+            'add_new_item' => 'Add new experiences article',
+            'edit_item' => 'Edit experiences article',
+            'all_items' => 'All experiences articles',
+            'singular_name' => 'Experiences article'
+		),
+    'rewrite'     => array(
+      'slug' => __( 'experiences', 'blogasrobke' ),
+    ),
+		'menu_icon' => 'dashicons-palmtree',
+        'supports' => array(
+            'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments', 'page-attributes', 'post-formats', 'custom-fields'
+        )
+	));
+}
+add_action('init', 'blogasrobke_post_types');

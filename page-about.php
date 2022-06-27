@@ -13,10 +13,10 @@ ABOUT ME page template
 <section class="container about">
     <div class="container__inner d-flex-2 txt-center">
         <div class="flex-2-child-50">
-            <h1 class="pb-sm">Who I am and what I do</h1>
+            <h1 class="pb-sm"><?php the_field('top_tittle');?></h1>
         </div>
         <figure class="flex-2-child-50">
-            <img width="600" height="400" src="<?php echo get_template_directory_uri() . '/img/about-boom.webp'; ?>" alt="About"/>
+            <img width="600" height="400" src="<?php the_field('top_image');?>" alt="<?php _e('About page image', 'blogasrobke'); ?>"/>
         </figure>
     </div>
 </section>

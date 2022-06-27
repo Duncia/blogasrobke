@@ -13,10 +13,10 @@ WEB DEV page template
 <section class="container about">
     <div class="container__inner d-flex-2 txt-center">
         <div class="flex-2-child-50">
-            <h1 class="pb-sm">Web development</h1>
+            <h1 class="pb-sm"><?php the_field('top_tittle');?></h1>
         </div>
         <figure class="flex-2-child-50">
-            <img width="600" height="400" src="<?php echo get_template_directory_uri() . '/img/web-dev.webp'; ?>" alt="Web development"/>
+            <img width="600" height="400" src="<?php the_field('top_image');?>" alt="<?php _e('Web development page image', 'blogasrobke'); ?>"/>
         </figure>
     </div>
 </section>

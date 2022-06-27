@@ -17,7 +17,7 @@ PAGE template.
             <?php the_content(); ?>
         <?php endwhile;
         else :
-            echo 'Nothing to show.';
+            _e('Nothing to display...', 'blogasrobke');
         endif;
         ?>
     </section>
