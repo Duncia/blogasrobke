@@ -13,7 +13,7 @@
         ul {
             list-style: none;
             display: block;
-            @include tablet {
+            @include smallLaptop {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 grid-gap: 1.5rem;

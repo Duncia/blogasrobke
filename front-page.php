@@ -54,7 +54,7 @@ HOME PAGE template
                 </a>
             </div>
             <div class="cs-box cs-box--blue">
-                <a href="<?php the_field('url_blue_box');?>" target="_blank">
+                <a href="<?php the_field('url_blue_box');?>">
                     <p class="box__text box__text--2"><?php the_field('text_blue_box');?></p>
                     <img width="600" height="400" src="<?php echo get_template_directory_uri() . '/img/man-showing-ok.webp'; ?>" alt="<?php _e('Home page man image', 'blogasrobke'); ?>"/>
                     <p class="text__bubble"><?php the_field('bubble_text_blue_box');?></p>

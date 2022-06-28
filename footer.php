@@ -9,17 +9,15 @@ Website FOOTER part.
     <section class="container contact pt-md">
         <div class="container__inner d-flex-2">
             <div class="flex-2-child-50">
-                <h2 class="pb-sm">Write me message</h2>
-                <form action="#" class="contact__form">
-                    <div class="contact__form-inputs">
-                        <input type="text" placeholder="Your name">
-                        <input type="email" placeholder="Your email">
-                    </div>
-                    <div class="contact__form-textarea">
-                        <textarea name="" id="" cols="20" rows="6" placeholder="Your message"></textarea>
-                    </div>
-                    <button class="btn btn--white btn--white--form-border pb-sm">Send message</button>
-                </form>
+                <h2 class="pb-sm"><?php _e('Write me message', 'blogasrobke'); ?></h2>
+				<div class="contact__form">
+                    <?php
+                    if(get_locale() === 'lt_LT'){
+                        echo do_shortcode('[fluentform id="4"]');
+                    } else {
+                        echo do_shortcode('[fluentform id="3"]');
+                    }?>
+                </div>
             </div>
             <figure class="flex-2-child-50 txt-center">
                 <img width="600" height="400" src="<?php echo get_template_directory_uri() . '/img/contact-me.webp'; ?>" alt="<?php _e('Contact form image', 'blogasrobke'); ?>"/>
@@ -29,11 +27,9 @@ Website FOOTER part.
     <footer class="container footer">
         <div class="container__inner">
             <nav class="footer__nav">
-                <ul>
                     <?php $args = array(
                     'theme_location' => 'footer-meniu');
                     wp_nav_menu($args); ?>
-                </ul>
             </nav>
             <div class="footer__icons">
                 <div class="footer-svg">
