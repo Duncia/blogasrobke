@@ -24,7 +24,13 @@ SINGLE POST template.
     </section>
     <section class="container__inner container__inner--page">
         <?php the_content(); ?>    
-        <h4 class="pt-sm pb-sm"><?php _e('<a href="https://blogasrobke.eu/all/">#All articles</a>', 'blogasrobke'); ?></h4> 
+        <?php
+            if(get_locale() === 'lt_LT'){
+                echo '<h4 class="pt-sm pb-sm"><a href="https://blogasrobke.eu/lt/visi/">#Visi straipsniai</a></h4>';
+            } else {
+                echo '<h4 class="pt-sm pb-sm"><a href="https://blogasrobke.eu/all/">#All articles</a></h4>';
+            };
+        ?>
     </section>
 </main>
 <?php   endwhile;

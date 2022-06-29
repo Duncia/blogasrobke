@@ -19,7 +19,7 @@ PAGE ALL articles template
                 array(
                     'post_type'=> array('post','web','experiences'), 
                     'post_status'=>'publish',
-                    'posts_per_page'=> 3
+                    'paged'=>get_query_var('paged', 1)
                 )); 
             ?>
             <?php if ( $allPosts->have_posts() ) : ?>

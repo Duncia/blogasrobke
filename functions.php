@@ -50,9 +50,6 @@ function blogasrobke_post_types() {
             'all_items' => 'All web articles',
             'singular_name' => 'Web article'
 		),
-    'rewrite'     => array(
-      'slug' => __( 'web', 'blogasrobke' ),
-    ),
 		'menu_icon' => 'dashicons-media-code',
         'supports' => array(
             'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments', 'page-attributes', 'post-formats', 'custom-fields'
@@ -71,9 +68,6 @@ function blogasrobke_post_types() {
             'all_items' => 'All experiences articles',
             'singular_name' => 'Experiences article'
 		),
-    'rewrite'     => array(
-      'slug' => __( 'experiences', 'blogasrobke' ),
-    ),
 		'menu_icon' => 'dashicons-palmtree',
         'supports' => array(
             'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments', 'page-attributes', 'post-formats', 'custom-fields'
